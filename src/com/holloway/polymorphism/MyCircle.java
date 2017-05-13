@@ -3,11 +3,11 @@ package com.holloway.polymorphism;
 public class MyCircle extends MyShape {
 
 
-    public MyCircle(UI theUI){
+    MyCircle(UI theUI){
         //need radius
         myUI = theUI;
-        dimension = theUI.getDimension("Please enter the Circle Radius: \n");
 
+        dimension = theUI.getDimension("Please enter the Circle Radius: \n");
     }
 
     public void calcArea(){
@@ -21,6 +21,6 @@ public class MyCircle extends MyShape {
         double perimeter;
 
         perimeter = Math.rint(Math.PI * 2 * dimension);
-        myUI.diplayPerimeter(perimeter);
+        myUI.displayPerimeter(perimeter);
     }
 }

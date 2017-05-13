@@ -2,16 +2,16 @@ package com.holloway.polymorphism;
 
 import java.util.Scanner;
 
-public class UI {
+class UI {
     //handles interaction with the user
     private Scanner myScanner;
 
-    public UI(){
+    UI(){
         System.out.println("Welcome to the Shape Calculator");
         myScanner = new Scanner(System.in);
     }
 
-    public int promptUser(){
+    int promptUser(){
         int result;
         System.out.println("Do you wish to perform calculations on: ");
         System.out.println("----------------------------------------");
@@ -26,21 +26,25 @@ public class UI {
         return result;
     }
 
-    public boolean playAgain(){
+    boolean playAgain() {
         String answer;
-        boolean response = false;
 
         System.out.println(""); //blank line
         System.out.println("Would you like to perform another calculation (y/n)?");
 
         answer = myScanner.next();
-        if (answer.equals("y")){
-            response = true;
+        if (answer.equalsIgnoreCase("y")) {
+            return true;
+        } else if (answer.equalsIgnoreCase("n")) {
+            return false;
+        } else {
+            System.out.println("Incorrect Value Entered, quitting by default! ");
+            return false;
         }
-        return response;
+
     }
 
-    public int getDimension(String prompt){
+    int getDimension(String prompt){
         int theDimension;
 
         System.out.println("");
@@ -50,11 +54,11 @@ public class UI {
         return theDimension;
     }
 
-    public void displayArea(double area){
+    void displayArea(double area){
         System.out.println("Area is " + area);
     }
 
-    public void diplayPerimeter(double perimeter){
+    void displayPerimeter(double perimeter){
         System.out.println("Perimeter is " + perimeter);
     }
 }

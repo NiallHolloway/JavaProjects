@@ -2,11 +2,11 @@ package com.holloway.polymorphism;
 
 public class MySquare extends MyShape {
 
-    public MySquare(UI theUI){
+    MySquare(UI theUI){
         //need radius
         myUI = theUI;
 
-        dimension = theUI.getDimension("Please enteer the square side length: \n");
+        dimension = theUI.getDimension("Please enter the square side length: \n");
     }
 
     public void calcArea(){
@@ -20,6 +20,6 @@ public class MySquare extends MyShape {
         double perimeter;
 
         perimeter = 4 * dimension;
-        myUI.diplayPerimeter(perimeter);
+        myUI.displayPerimeter(perimeter);
     }
 }

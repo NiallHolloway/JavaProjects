@@ -2,11 +2,10 @@ package com.holloway.polymorphism;
 
 public abstract class MyShape {
 
-    protected int dimension;
-    protected UI myUI;
+    int dimension;
+    UI myUI;
 
-    public MyShape(){
-
+    MyShape(){
     }
 
     public abstract void calcArea();
